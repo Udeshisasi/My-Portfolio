@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasini Senanayake - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightpink: '#FFD1DC',
+                        darkpink: '#970747',
+                        white: '#FFFFFF',
+                        grey: '#808080',
+                        lightgrey: '#F0F0F0'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            position: relative;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            position: absolute;
+            height: 100%;
+            border-radius: 4px;
+            background-color: #970747;
+            transition: width 1s ease-in-out;
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #970747;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .circular-image {
+            width: 50px; /* Set your desired size */
+            height: 45px; /* Make height and width equal for a perfect circle */
+            border-radius: 50%; /* This creates the circle effect */
+            object-fit: cover; /* This ensures the image fills the container without distortion */
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-lightgrey">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <nav class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mr-3">
+                        <span><img src="images/2.jpg" alt="Profile Picture" class="circular-image"></span>
+                    </div>
+                    <div class="text-2xl font-bold text-darkpink">Sasini Senanayake</div>
+                </div>
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="nav-link text-gray-700 hover:text-darkpink transition-colors">Home</a></li>
+                        <li><a href="#about" class="nav-link text-gray-700 hover:text-darkpink transition-colors">About</a></li>
+                        <li><a href="#experience" class="nav-link text-gray-700 hover:text-darkpink transition-colors">Experience</a></li>
+                        <li><a href="#education" class="nav-link text-gray-700 hover:text-darkpink transition-colors">Education</a></li>
+                        <li><a href="#projects" class="nav-link text-gray-700 hover:text-darkpink transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="nav-link text-gray-700 hover:text-darkpink transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-darkpink text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="#home" class="block text-gray-700 hover:text-darkpink transition-colors">Home</a></li>
+                    <li><a href="#about" class="block text-gray-700 hover:text-darkpink transition-colors">About</a></li>
+                    <li><a href="#experience" class="block text-gray-700 hover:text-darkpink transition-colors">Experience</a></li>
+                    <li><a href="#education" class="block text-gray-700 hover:text-darkpink transition-colors">Education</a></li>
+                    <li><a href="#projects" class="block text-gray-700 hover:text-darkpink transition-colors">Projects</a></li>
+                    <li><a href="#contact" class="block text-gray-700 hover:text-darkpink transition-colors">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-lightpink to-white py-20">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <span class="text-4xl md:text-5xl font-bold mb-4 text-darkpink">Hello, I'm</span> 
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-darkpink">Sasini Senanayake</h1>
+
+                <p class="text-xl md:text-2xl mb-8 text-Black text-align: justify">
+                    <span class="typing-text"></span>
+                    <span class="cursor-blink">|</span>
+                </p>
+                <!-- <p class="text-xl mb-6 text-gray-700">Project Manager | Web Developer | UI/UX Designer</p> -->
+                <p class="mb-8 text-gray-600">I am seeking a challenging career in an organization that fosters continuous learning. Eager to prove myself as a valuable team member, I aspire to contribute my best abilities to successfully handle diverse projects and achieve excellence.</p>
+                <!-- <a href="#contact" class="bg-darkpink text-white px-6 py-3 rounded hover:bg-opacity-90 transition-colors inline-flex items-center">
+                    Get In Touch
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a> -->
+
+                <a href="/assets/Sasini Senanayake - Resume.pdf" download class="btn-gradient py-3 px-8 rounded-full bg-darkpink text-white font-medium shadow-lg inline-flex items-center">
+                    <i class="fas fa-download mr-2"></i> Download Resume
+                </a>
+
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                    <p class="text-xl md:text-2xl mb-8 text-Black text-align: justify">
+                    <span class="typing-text"></span>
+                    <span class="cursor-blink">|</span>
+                </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-darkpink relative">
+                About Me
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-darkpink"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Personal Info</h3>
+                    <div class="mb-8">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-4">
+                                <i class="fas fa-envelope text-darkpink"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Email</p>
+                                <p>s.sasiniu@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-4">
+                                <i class="fas fa-phone text-darkpink"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Phone</p>
+                                <p>0775633589</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-4">
+                                <i class="fas fa-map-marker-alt text-darkpink"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">Location</p>
+                                <p>Batuwewa Junction, Thalvita, Kurunegala</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-4">
+                                <i class="fab fa-linkedin text-darkpink"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">LinkedIn</p>
+                                <a href="https://www.linkedin.com/in/udeshika-senanayake/" class="text-darkpink hover:underline" target="_blank">linkedin.com/in/udeshika-senanayake</a>
+                            </div>
+                        </div><br>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-4">
+                                <i class="fab fa-github mr-2 text-darkpink"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-gray-500">GitHub</p>
+                                <a href="https://github.com/Udeshisasi/" class="text-darkpink hover:underline" target="_blank">linkedin.com/in/udeshika-senanayake</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Professional Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Communication</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Leadership</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Project Management</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>Problem Solving</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span>UI/UX Designing</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Technical Skills</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-code text-darkpink"></i>
+                            </div>
+                            <span>HTML5/CSS3/JavaScript/PHP</span>
+                        </div>
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fab fa-node-js text-darkpink"></i>
+                            </div>
+                            <span>MERN Stack</span>
+                        </div>
+                        <!-- <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fab fa-wordpress text-darkpink"></i>
+                            </div>
+                            <span>WordPress</span>
+                        </div> -->
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-database text-darkpink"></i>
+                            </div>
+                            <span>MYSQL</span>
+                        </div>
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-palette text-darkpink"></i>
+                            </div>
+                            <span>Canva / Figma</span>
+                        </div>
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-tasks text-darkpink"></i>
+                            </div>
+                            <span>Clickup / Jira</span>
+                        </div>
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-project-diagram text-darkpink"></i>
+                            </div>
+                            <span>MS Project</span>
+                        </div>
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fab fa-python text-darkpink"></i>
+                            </div>
+                            <span>Python</span>
+                        </div>
+                        <!-- <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fab fa-git-alt text-darkpink"></i>
+                            </div>
+                            <span>Git</span>
+                        </div> -->
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-file-word text-darkpink"></i>
+                            </div>
+                            <span>MS Office</span>
+                        </div>
+                        <!-- <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-chart-bar text-darkpink"></i>
+                            </div>
+                            <span>Power BI</span>
+                        </div> -->
+                        <div class="bg-lightpink bg-opacity-30 p-4 rounded flex items-center">
+                            <div class="w-10 h-10 rounded-full bg-lightpink flex items-center justify-center mr-3">
+                                <i class="fas fa-recycle text-darkpink"></i>
+                            </div>
+                            <span>Agile & DevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-lightpink bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-darkpink relative">
+                Experience
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-darkpink"></span>
+            </h2>
+            
+            <div class="space-y-10">
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <div class="text-darkpink font-semibold">2023.09.20 - 2024.03.27</div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-lightpink text-darkpink text-sm mt-2">
+                            Internship
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-semibold text-gray-800">Intern Project Manager</h3>
+                        <p class="text-gray-600 mb-3">Aadhira Holdings (Pvt) Ltd - Colombo</p>
+                        <p class="text-gray-700">
+                            I successfully fulfilled assigned responsibilities during my 6-month internship, effectively
+                            collaborating with team members and providing guidance where necessary. I
+                            consistently delivered project tasks on schedule, utilizing Mern Stack, Agile Framework,
+                            Scrum, and Waterfall Methodology. The tools I employed included ClickUp for task
+                            management, Figma for design, and Visual Studio Code (VS Code) for development.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md flex flex-col md:flex-row">
+                    <div class="md:w-1/4 mb-4 md:mb-0">
+                        <div class="text-darkpink font-semibold">2024.10.15 - 2025.03.20</div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-lightpink text-darkpink text-sm mt-2">
+                            Training
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-xl font-semibold text-gray-800">Trainee - Marketing Executive</h3>
+                        <p class="text-gray-600 mb-3">St. George Teacher Trainee Institute - Negombo</p>
+                        <p class="text-gray-700">
+                            Trainee Marketing Executive at St. George Teacher Trainee Institute, assisting in
+                            promotions, market research, and campaign management to enhance brand outreach.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-darkpink relative">
+                Education
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-darkpink"></span>
+            </h2>
+            
+            <div class="space-y-10">
+                <div class="bg-lightpink bg-opacity-10 p-6 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">BSc (Hons) in Business Information System</h3>
+                        <div class="text-darkpink font-semibold mt-2 md:mt-0">3rd year (2024 - present)</div>
+                    </div>
+                    <p class="text-gray-700">International College of Business and Technology (ICBT)</p>
+                    <p class="text-gray-600 italic">Reading</p>
+                </div>
+                
+                <div class="bg-lightpink bg-opacity-10 p-6 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Higher National Diploma in Information Systems Management</h3>
+                        <div class="text-darkpink font-semibold mt-2 md:mt-0">2nd year (2022-2023)</div>
+                    </div>
+                    <p class="text-gray-700">National Institute of Business Management (NIBM)</p>
+                    <p class="text-gray-600 italic">Successfully Completed the HND with Merit - GPA of 3.74</p>
+                </div>
+                
+                <div class="bg-lightpink bg-opacity-10 p-6 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Diploma in Software Engineering</h3>
+                        <div class="text-darkpink font-semibold mt-2 md:mt-0">1st year (2020-2022)</div>
+                    </div>
+                    <p class="text-gray-700">National Institute of Business Management (NIBM)</p>
+                    <p class="text-gray-600 italic">Successfully Completed the Diploma with a GPA of 3.56</p>
+                </div>
+                
+                <div class="bg-lightpink bg-opacity-10 p-6 rounded-lg shadow-md">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold text-gray-800">Certificate in HRM</h3>
+                        <div class="text-darkpink font-semibold mt-2 md:mt-0">(2024)</div>
+                    </div>
+                    <p class="text-gray-700">International Business Studies Campus</p>
+                    <p class="text-gray-600 italic">Successfully Completed the Certificate in HRM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-lightpink bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-darkpink relative">
+                Projects
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-darkpink"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="/api/placeholder/400/240" alt="Café Web Application" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Web Application for a Café</h3>
+                        <p class="text-gray-700 mb-4">Created a complete web application for a café using HTML, CSS, JavaScript, PHP, and MSSQL.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">HTML</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">CSS</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">JavaScript</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">PHP</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">MSSQL</span>
+                        </div>
+                        <a href="#" class="text-darkpink hover:underline flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div> -->
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/Obituary.png" alt="Obituary Web Site" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Obituary Web Site</h3>
+                        <p class="text-gray-700 mb-4">Created a complete web application for a obituary website using MERN Stack (Express.js, React.js, Node.js) + MySQL.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Express.js</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">React.js</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Node.js</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">MySQL</span>
+                        </div>
+                        <a href="obituary.html" class="text-darkpink hover:underline flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/Salon.png" alt="Salon Booking System" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Online Booking System for a Salon</h3>
+                        <p class="text-gray-700 mb-4">Developed an online booking system for a salon with HTML, CSS, and JavaScript.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">HTML</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">CSS</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">JavaScript</span>
+                        </div>
+                        <a href="salon.html" class="text-darkpink hover:underline flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/gv.png" alt="Obituary Web Site" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">GV Academic Web Platform</h3>
+                        <p class="text-gray-700 mb-4">Created a complete web application for a GV Academic Web Platform using React.js, Tailwind CSS, Vite.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">React.js</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Vite</span>
+                        </div>
+                        <a href="gv.html" class="text-darkpink hover:underline flex items-center">
+                            View Project <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>            
+    </section>
+            
+    <!-- UI/UX Section -->
+    <section id="projects" class="py-20 bg-lightpink bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-darkpink relative">
+                UI Design
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-darkpink"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/amarar.png" alt="Mobile Phone Shop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Obituary website</h3>
+                        <p class="text-gray-700 mb-4">A thoughtful and compassionate user interface created to provide a respectful digital space for sharing tributes. Designed using Figma and Miro, the UI emphasizes clarity, empathy, and ease of use. Key design elements include intuitive user flows, accessible navigation, mobile responsiveness, and a clean layout for posting obituaries, sharing condolences, and engaging with the community.</p>
+                        
+                        <a href="https://www.figma.com/design/I2EgnDRwCqzYvIbWPXC7QQ/Amarar-web-and-app?node-id=0-1&t=jgsCdw3unsWox1Iv-1" target="_blank" class="text-darkpink hover:underline flex items-center">
+                            View UI <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/Mobile Store ui.png" alt="Mobile Phone Shop" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Mobile Phone Shop</h3>
+                        <p class="text-gray-700 mb-4">A clean and modern user interface designed for a mobile phone shop, featuring intuitive navigation, eye-catching product displays, and a smooth shopping experience. The design includes sections for featured phones, brand filters, detailed product pages, and a streamlined checkout process—ensuring users can easily browse, compare, and purchase the latest mobile devices.</p>
+                        
+                        <a href="https://www.figma.com/design/ia3uOeek9Pe8eZHkvK5Mu0/Mobile-Phone-Store?node-id=0-1&t=0IInvxz7dKlKZ1nY-1" target="_blank" class="text-darkpink hover:underline flex items-center">
+                            View UI <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/Inventory.png" alt="Sales & Inventory Management" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Sales & Inventory Management</h3>
+                        <p class="text-gray-700 mb-4">A user-friendly and efficient interface crafted to simplify sales tracking and inventory management. The design includes dashboards with real-time data, product stock levels, sales analytics, and quick access to order and supplier management. It ensures smooth navigation for both admins and staff, promoting better decision-making and business control.</p>
+                        
+                        <a href="https://www.figma.com/design/jnYhfRv9I3sc8x9Gf7XLtN/app-design?node-id=18-1217&t=E4Yn6YjmbxmbZ3MT-1" target="_blank" class="text-darkpink hover:underline flex items-center">
+                            View UI <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/MBS.png" alt="Project MBS" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Project MBS</h3>
+                        <p class="text-gray-700 mb-4">A modern and intuitive interface designed to enhance the digital learning experience for students and faculty. The UI features a clean dashboard with easy access to courses, assignments, grades, announcements, and communication tools. With responsive design and user-centric navigation, it ensures seamless interaction and efficient academic management.</p>
+                        <a href="https://www.figma.com/design/f2guKg91WGpb4iMYJePK5d/Project-MBS?node-id=0-1&t=McHIAE7sssaWysRa-1" target="_blank" class="text-darkpink hover:underline flex items-center">
+                            View UI <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div> 
+            </div>       
+        </div>            
+    </section>
+    
+    <!-- Research Section -->
+    <section id="projects" class="py-20 bg-lightpink bg-opacity-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-darkpink relative">
+                Researchs
+                <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-darkpink"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/PM.jpg" alt="ERP System Research" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Automated Time-Tracking and Attendance Management System</h3>
+                        <p class="text-gray-700 mb-4">A project plan for automating time-tracking at SoftTech Solutions using biometric, GPS, and real-time tech. The Agile-based system improves payroll accuracy, project management, and efficiency with scalable, secure tools like React, Node.js, and Firebase, ensuring smooth operations and growth.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Research</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">SRS</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Analysis</span>
+                        </div>
+                        <a href="https://github.com/Udeshisasi/PM-Research/blob/main/Project%20Management.pdf" target="_blank" class="text-darkpink hover:underline flex items-center">
+                            View Research Paper <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/PM2.jpg" alt="ERP System Research" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">CRM System Implementation for Washmaster Laundry</h3>
+                        <p class="text-gray-700 mb-4">CRM system implementation at Washmaster aims to boost efficiency, retention, and customer satisfaction across 25 outlets. Cloud-based and mobile-compatible, it includes sales tracking, automation, and analytics. With a 1.2-year payback, the project ensures growth through structured planning and risk control.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Research</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">WBS</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">NPV</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Analysis</span>
+                        </div>
+                        <a href="https://github.com/Udeshisasi/CRM-System-Implementation-for-Washmaster-Laundry/blob/main/CRM%20System%20Implementation%20for%20Washmaster%20Laundry.pdf" target="_blank" class="text-darkpink hover:underline flex items-center">
+                            View Research Paper <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
+                    <div class="h-48 bg-gray-300 flex items-center justify-center">
+                        <img src="images/agile.jpg" alt="Agile and DevOps Research" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-800">Agile and DevOps Research</h3>
+                        <p class="text-gray-700 mb-4">Researched the influence of Agile and DevOps methodologies on the new generation's work dynamics and outcomes.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Agile</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">DevOps</span>
+                            <span class="px-3 py-1 bg-lightpink text-darkpink rounded-full text-xs">Research</span>
+                        </div>
+
+                        <a href="https://github.com/Udeshisasi/Agile-Agile-and-DevOps-Research/blob/main/Agile%20Development%20and%20DevOps.pdf" target="_blank" class="text-darkpink hover:underline flex items-center">
+                            View Research Paper <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                
+            </div>    
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 relative overflow-hidden section-fade bg-gray-50">
+        <div class="absolute top-0 left-0 w-72 h-72 bg-pink-200 rounded-full filter blur-3xl opacity-10"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 bg-[#970747] rounded-full filter blur-3xl opacity-10"></div>
+        
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-center mb-16 text-darkpink relative">
+                    Get In Touch
+                    <span class="absolute bottom-[-10px] left-1/2 transform -translate-x-1/2 w-20 h-1 bg-darkpink"></span>
+                </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-white border-opacity-20">
+                    <h3 class="text-xl font-semibold text-gray-800">Contact Information</h3><br>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-pink-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                            <a href="mailto:sasini@example.com" class="text-gray-600 hover:text-[#970747]">s.sasiniu@gmail.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-pink-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                            </svg>
+                            <a href="tel:+1234567890" class="text-gray-600 hover:text-[#970747]">(+94)77 563 3589</a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-pink-300" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="text-gray-600">Kurunegala, Sri Lanka</span>
+                        </div><br>
+                        <div class="flex space-x-4 mt-6">
+                            <a href="https://www.linkedin.com/in/udeshika-senanayake/" class="text-gray-500 hover:text-[#970747]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/Udeshisasi/" class="text-gray-500 hover:text-[#970747]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/sasini" class="text-gray-500 hover:text-[#970747]">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-white border-opacity-20">
+                    <h3 class="text-xl font-semibold text-gray-800">Send a Message</h3> <br>
+                    <div class="space-y-4">
+                        <div>
+                            <input type="text" id="name" placeholder="Your Name" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200">
+                        </div>
+                        <div>
+                            <input type="email" id="email" placeholder="Your Email" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200">
+                        </div>
+                        <div>
+                            <textarea id="message" placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200"></textarea>
+                        </div>
+                        <button id="submit-contact" class="btn-gradient py-3 px-8 rounded-full bg-darkpink text-white font-medium shadow-lg inline-flex items-center">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+                        
+<!-- Footer Section -->
+<footer class="bg-dark-grey py-6 mt-12 w-full">
+    <div class="w-full px-4">
+      <div class="bg-dark-grey bg-opacity-10 rounded-lg p-6 shadow-md">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-dark-grey font-medium text-center md:text-left">© 2025 My Portfolio. All Rights reserved</p>
+        </div>
+    
+        <!-- <div class="mt-4 pt-4 border-t border-dark-grey border-opacity-20">
+          <div class="flex flex-wrap justify-center md:justify-between gap-4 text-sm text-dark-grey">
+            <a href="#" class="hover:text-dark-pink transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-dark-pink transition-colors">Terms of Service</a>
+            <a href="#" class="hover:text-dark-pink transition-colors">Contact Me</a>
+            <a href="#" class="hover:text-dark-pink transition-colors">About This Site</a>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </footer> 
+                          
+                          
+
+    <script>
+    // Typing animation
+        const typingText = document.querySelector('.typing-text');
+        const texts = ['Project Manager', 'Full-Stack Developer', 'UI/UX Designer', 'Data Analyst'];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function type() {
+            const currentText = texts[textIndex];
+            
+            if (!isDeleting && charIndex <= currentText.length) {
+                typingText.textContent = currentText.substring(0, charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else if (isDeleting && charIndex >= 0) {
+                typingText.textContent = currentText.substring(0, charIndex);
+                charIndex--;
+                setTimeout(type, 50);
+            } else {
+                isDeleting = !isDeleting;
+                if (!isDeleting) {
+                    textIndex = (textIndex + 1) % texts.length;
+                }
+                setTimeout(type, isDeleting ? 1000 : 2000);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            type();
+        });
+    </script>
+</body>
