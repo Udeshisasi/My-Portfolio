@@ -745,7 +745,12 @@
                         <div>
                             <textarea id="message" placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200"></textarea>
                         </div>
-                        <button id="submit-contact" class="btn-gradient py-3 px-8 rounded-full bg-darkpink text-white font-medium shadow-lg inline-flex items-center">Send Message</button>
+                        <!-- <button id="submit-contact" class="btn-gradient py-3 px-8 rounded-full bg-darkpink text-white font-medium shadow-lg inline-flex items-center">Send Message</button> -->
+                        
+                        <form id="contact-form">
+                            <!-- Your existing button -->
+                            <button id="submit-contact" class="btn-gradient py-3 px-8 rounded-full bg-darkpink text-white font-medium shadow-lg inline-flex items-center">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -805,5 +810,39 @@
         document.addEventListener('DOMContentLoaded', () => {
             type();
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            type();
+        });
+
+        // Add event listener to the form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Get form values
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            // Here you would typically send the data to your server
+            // This is a placeholder for the actual email sending logic
+            sendEmail(email, message);
+        });
+        
+        function sendEmail(email, message) {
+            // This function would contain your email sending logic
+            // For example, an AJAX call to your backend service
+            console.log(`Sending email to ${email} with message: ${message}`);
+            
+            // Example AJAX call (you would need to implement this)
+            // fetch('/send-email', {
+            //   method: 'POST',
+            //   body: JSON.stringify({ email, message }),
+            //   headers: { 'Content-Type': 'application/json' }
+            // })
+            // .then(response => response.json())
+            // .then(data => alert('Email sent successfully!'))
+            // .catch(error => alert('Error sending email'));
+        }
+        
     </script>
 </body>
