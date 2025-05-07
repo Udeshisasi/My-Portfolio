@@ -101,8 +101,8 @@
                     <i class="fas fa-bars"></i>
                 </button>
             </nav>
-            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
-                <ul class="flex flex-col space-y-4">
+            <div id="mobile-menu" class="hidden w-full bg-dark py-4 px-4 md:hidden">
+                <ul class="flex flex-col space-y-4 ">
                     <li><a href="#home" class="block text-gray-700 hover:text-darkpink transition-colors">Home</a></li>
                     <li><a href="#about" class="block text-gray-700 hover:text-darkpink transition-colors">About</a></li>
                     <li><a href="#experience" class="block text-gray-700 hover:text-darkpink transition-colors">Experience</a></li>
@@ -590,6 +590,10 @@
                         </a>
                     </div>
                 </div>
+
+                <!-- <a href="ui.html" class="text-darkpink hover:underline flex items-center">
+                    See More.. <i class="fas fa-arrow-right ml-2"></i>
+                </a> -->
                 
                 <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:transform hover:scale-105">
                     <div class="h-48 bg-gray-300 flex items-center justify-center">
@@ -699,7 +703,7 @@
                                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                             </svg>
-                            <a href="mailto:sasini@example.com" class="text-gray-600 hover:text-[#970747]">s.sasiniu@gmail.com</a>
+                            <a href="mailto:s.sasiniu@gmail.com" class="text-gray-600 hover:text-[#970747]">s.sasiniu@gmail.com</a>
                         </div>
                         <div class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3 text-pink-300" viewBox="0 0 20 20" fill="currentColor">
@@ -724,32 +728,61 @@
                                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                                 </svg>
                             </a>
-                           <!-- <a href="https://twitter.com/sasini" class="text-gray-500 hover:text-[#970747]">
+                            <a href="https://twitter.com/sasini" class="text-gray-500 hover:text-[#970747]">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
                                     <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
                                 </svg>
-                            </a> -->
+                            </a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-2xl shadow-xl border border-white border-opacity-20">
-                    <h3 class="text-xl font-semibold text-gray-800">Send a Message</h3> <br>
-                    <div class="space-y-4">
-                        <div>
-                            <input type="text" id="name" placeholder="Your Name" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200">
-                        </div>
-                        <div>
-                            <input type="email" id="email" placeholder="Your Email" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200">
-                        </div>
-                        <div>
-                            <textarea id="message" placeholder="Your Message" rows="5" class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200"></textarea>
-                        </div>
-                        <!-- <button id="submit-contact" class="btn-gradient py-3 px-8 rounded-full bg-darkpink text-white font-medium shadow-lg inline-flex items-center">Send Message</button> -->
-                        
-                        <form id="contact-form">
-                            <!-- Your existing button -->
-                            <button id="submit-contact" class="btn-gradient py-3 px-8 rounded-full bg-darkpink text-white font-medium shadow-lg inline-flex items-center">Send Message</button>
+                    <h3 class="text-xl font-semibold text-gray-800">Send a Message</h3>
+                    <div class="mt-6">
+                        <form id="contact-form" action="mailto:s.sasiniu@gmail.com" method="post" enctype="text/plain">
+                            <div class="space-y-4">
+                                <div>
+                                    <input 
+                                        type="text" 
+                                        id="name" 
+                                        name="name"
+                                        placeholder="Your Name" 
+                                        required
+                                        class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200">
+                                </div>
+                                
+                                <div>
+                                    <input 
+                                        type="email" 
+                                        id="email" 
+                                        name="email"
+                                        placeholder="Your Email" 
+                                        required
+                                        class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200">
+                                </div>
+                                
+                                <div>
+                                    <textarea 
+                                        id="message" 
+                                        name="message"
+                                        placeholder="Your Message" 
+                                        rows="5" 
+                                        required
+                                        class="w-full p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 bg-white bg-opacity-20 backdrop-blur-sm text-gray-700 placeholder-gray-500 border border-gray-200"></textarea>
+                                </div>
+                                
+                                <button 
+                                    type="submit" 
+                                    id="submit-contact" 
+                                    class="btn-gradient py-3 px-8 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 text-white font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+                                    Send Message
+                                </button>
+                                
+                                <div id="success-message" class="hidden p-4 bg-green-100 text-green-700 rounded-lg">
+                                    Thank you! Your message has been sent.
+                                </div>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -811,38 +844,40 @@
             type();
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            type();
-        });
-
         // Add event listener to the form
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent default form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            // Optional: If you want to show a success message without actually submitting via mailto
+            // Uncomment the following code and comment out the mailto in the form action
             
-            // Get form values
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            e.preventDefault();
+            const successMessage = document.getElementById('success-message');
+            successMessage.classList.remove('hidden');
+            this.reset();
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 5000);
             
-            // Here you would typically send the data to your server
-            // This is a placeholder for the actual email sending logic
-            sendEmail(email, message);
+            
+            // For a complete solution, you would typically:
+            // 1. Use a backend service (PHP, Node.js, etc.) to handle the email sending
+            // 2. Set up the form to submit to that backend via fetch/ajax
+            // Example:
+            
+            e.preventDefault();
+            fetch('your-backend-endpoint.php', {
+                method: 'POST',
+                body: new FormData(this)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('success-message').classList.remove('hidden');
+                this.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+            
         });
-        
-        function sendEmail(email, message) {
-            // This function would contain your email sending logic
-            // For example, an AJAX call to your backend service
-            console.log(`Sending email to ${email} with message: ${message}`);
-            
-            // Example AJAX call (you would need to implement this)
-            // fetch('/send-email', {
-            //   method: 'POST',
-            //   body: JSON.stringify({ email, message }),
-            //   headers: { 'Content-Type': 'application/json' }
-            // })
-            // .then(response => response.json())
-            // .then(data => alert('Email sent successfully!'))
-            // .catch(error => alert('Error sending email'));
-        }
         
     </script>
 </body>
